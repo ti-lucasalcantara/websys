@@ -54,7 +54,6 @@ class Login extends BaseController
 			curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
 			$response = json_decode( curl_exec( $curl ), true);
 			curl_close($curl);
-
             if ( ! $response ){
                 session()->setFlashdata( getMessageFail('sweetalert', ['title' => 'Falha no login', 'text' => 'Falha ao comunicar com o servidor [API]']) );
                 return redirect()->back()->withInput();   

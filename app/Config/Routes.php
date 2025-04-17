@@ -5,6 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+$routes->get('error/api', 'Error::api', ['as' => 'api.error']);
+
 $routes->get('/', 'Home::index', ['as' => 'home']);
 
 // Login
